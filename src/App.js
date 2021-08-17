@@ -5,13 +5,21 @@ import Home from "./Components/Home/Home";
 import ProductDetails from "./Components/Pages/ProductDetails/ProductDetails";
 import Products from "./Components/Pages/Products/Products";
 import Navbar from "./Components/Shared/Navbar/Navbar";
+import Footer from './Components/Shared/Footer/Footer';
+import NotFound from "./Components/NotFound/NotFound";
+import Login from "./Components/Login/Login";
+import { createContext,useState } from "react";
+import PrivateRoute from "./Components/Shared/PrivateRoute/PrivateRoute";
 
-
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser,setLoggedInUser] = useState({});
+
   return (
-    <div>
-      <Router>
+    <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
+     <p>name : {loggedInUser.name}</p> 
+    <Router>
       <Navbar />
         <div>
           <Switch>
@@ -27,11 +35,17 @@ function App() {
             <Route path="/productDetails/:productKey">
             <ProductDetails />
             </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="*">
+            <NotFound />
+            </Route>
           </Switch>
         </div>
-      
+      <Footer />
       </Router>
-    </div>
+    </UserContext.Provider>
   );
 }
 

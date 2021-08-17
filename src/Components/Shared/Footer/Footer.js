@@ -3,11 +3,11 @@ import { FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div className="main-footer">
-        <div className="container">
-         <div className="row">
+        <div className="main-footer mt-5 bg-primary ">
+        <div className="container ">
+         <div className="row mt-5 ">
     {/* Column 1*/}
-          <div className="col-md-3 col-sm-6">
+          <div className="col-md-3 col-sm-6 mt-5">
            <h4>COMPANY</h4>
            <ul className="list-unstyled">
             <li>Shopping</li>
@@ -17,7 +17,7 @@ const Footer = () => {
            </ul>
           </div>
           {/* Column 2*/}
-          <div className="col-md-3 col-sm-6">
+          <div className="col-md-3 col-sm-6 mt-5">
            <h4>lorem ipsum</h4>
            <ul className="list-unstyled">
           <li><FaFacebook></FaFacebook> Facebook</li>
@@ -27,7 +27,7 @@ const Footer = () => {
            </ul>
           </div>
           {/* Column 3*/}
-          <div className="col-md-3 col-sm-6">
+          <div className="col-md-3 col-sm-6 mt-5">
            <h4>lorem ipsum</h4>
            <ul className="list-unstyled">
             <li>lorem ipsum</li>
@@ -37,7 +37,7 @@ const Footer = () => {
            </ul>
           </div>
           {/* Column 4*/}
-          <div className="col-md-3 col-sm-6">
+          <div className="col-md-3 col-sm-6 mt-5 ">
            <div id="subscribe">
            <p id="txt4">Subscribe to US</p>
            <form> <input id="email" type="email" placeholder="Email"></input>
