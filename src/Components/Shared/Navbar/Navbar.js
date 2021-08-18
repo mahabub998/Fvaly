@@ -1,15 +1,16 @@
 import React from "react";
+import Login from './../../Login/Login';
 
 const Navbar = () => {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-success ">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
             FVALLY
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -17,27 +18,27 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item ms-5">
-                <a class="nav-link active" aria-current="page" href="/home">
-                  HOME
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item ms-5">
+                <a className="nav-link active" aria-current="page" href="/home">
+                  ALL PRODUCTS
                 </a>
               </li>
-              <li class="nav-item ms-5">
-                <a class="nav-link active" aria-current="page" href="/product">
-                  COLlECTIONS
+              <li className="nav-item ms-5">
+                <a className="nav-link active" aria-current="page" href="*">
+                  GIFT CARDS
                 </a>
               </li>
-              <li class="nav-item ms-5">
-              <a class="nav-link" href="">
-                  OUR STORY
+              <li className="nav-item ms-5">
+              <a className="nav-link active" aria-current="page" href="*">
+                  NEWS FEED
                 </a>
               </li>
-              <li class="nav-item ms-5">
-                <a class="nav-link active" aria-current="page" href="/login">
+              <li className="nav-item ms-5">
+                <a className="nav-link active" aria-current="page" href="/login">
                   LOGIN
                 </a>
               </li>

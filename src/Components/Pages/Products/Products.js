@@ -12,8 +12,8 @@ const Products = () => {
   // }, []);
 
   return (
-    <div className="row w-100">
-   
+    <div className="row w-100 bg-gray">
+      
       {
           products.map((product) => ( <ProductShow product={product}></ProductShow>))
        

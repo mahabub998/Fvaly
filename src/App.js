@@ -5,20 +5,29 @@ import Home from "./Components/Home/Home";
 import ProductDetails from "./Components/Pages/ProductDetails/ProductDetails";
 import Products from "./Components/Pages/Products/Products";
 import Navbar from "./Components/Shared/Navbar/Navbar";
-import Footer from './Components/Shared/Footer/Footer';
 import NotFound from "./Components/NotFound/NotFound";
 import Login from "./Components/Login/Login";
 import { createContext,useState } from "react";
 import PrivateRoute from "./Components/Shared/PrivateRoute/PrivateRoute";
+import Footer from './Components/Shared/Footer/Footer';
+
+
+const userInfo = {
+	name: '',
+	email: '',
+	password: '',
+	isValidUser: false
+};
 
 export const UserContext = createContext();
 
 function App() {
-  const [loggedInUser,setLoggedInUser] = useState({});
+  // const [loggedInUser,setLoggedInUser] = useState({});
+  const [ user, setUser ] = useState(userInfo);
 
   return (
-    <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
-     <p>name : {loggedInUser.name}</p> 
+    <UserContext.Provider value={ [ user, setUser ]}>
+     
     <Router>
       <Navbar />
         <div>
@@ -32,9 +41,9 @@ function App() {
             <Route path="/product">
             <Products />
             </Route>
-            <Route path="/productDetails/:productKey">
+            <PrivateRoute path="/productDetails/:productKey">
             <ProductDetails />
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>
@@ -43,7 +52,7 @@ function App() {
             </Route>
           </Switch>
         </div>
-      <Footer />
+         
       </Router>
     </UserContext.Provider>
   );
