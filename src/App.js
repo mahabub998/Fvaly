@@ -9,7 +9,7 @@ import NotFound from "./Components/NotFound/NotFound";
 import Login from "./Components/Login/Login";
 import { createContext,useState } from "react";
 import PrivateRoute from "./Components/Shared/PrivateRoute/PrivateRoute";
-import Footer from './Components/Shared/Footer/Footer';
+
 
 
 const userInfo = {
