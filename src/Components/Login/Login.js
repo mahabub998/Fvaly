@@ -7,8 +7,6 @@ import { UserContext } from "./../../App";
 import { useHistory, useLocation } from "react-router-dom";
 import "./Login.css";
 import { FcGoogle } from "react-icons/fc";
-import CreateUser from "./Email/CreateUser";
-import SignInUser from "./Email/SingInUser";
 import Email from "./Email/Email";
 
 const Login = () => {
